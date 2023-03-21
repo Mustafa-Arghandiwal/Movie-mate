@@ -53,14 +53,13 @@ const fetchMovies = () => {
     
     const searchedMovie = search.value.split(' ').join('+')
     
-    fetch(`http://www.omdbapi.com/?apikey=ea4ff75d&s=${searchedMovie}`)
+    fetch(`https://www.omdbapi.com/?apikey=ea4ff75d&s=${searchedMovie}`)
     .then(res => res.json())
     .then(data => {
             document.querySelector('.main').style.height = 'fit-content'
             
                 const results = data.Search
                 if (!results || results.length === 0) {
-                    console.log('Nothing found');
                     dataWrapper.innerHTML = `
                     <h3 class=nothing-found>
                         Uh oh, it seems like the movie you are looking for has gone on a vacation!
@@ -73,7 +72,7 @@ const fetchMovies = () => {
                     
                     movieName = movieName.split(' ').join('+')
                     
-                    fetch(`http://www.omdbapi.com/?apikey=ea4ff75d&t=${movieName}`)
+                    fetch(`https://www.omdbapi.com/?apikey=ea4ff75d&t=${movieName}`)
                         .then(res => res.json())
                         .then(data => {
                             title = data.Title
