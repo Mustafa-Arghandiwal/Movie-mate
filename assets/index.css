@@ -171,7 +171,9 @@ main {
     color: #A5A5A5;
     text-align: center;
     line-height: 1.5;
-    margin-top: 5rem;
+    margin-top: 4rem;
+    max-width: 300px;
+
 }
 
 .start-exploring {
@@ -301,6 +303,7 @@ hr {
 }
 .add {
     cursor: pointer;
+    user-select: none;
 }
 .add-to-watchlist:active {
     transform: scale(1.1);
@@ -341,6 +344,11 @@ hr {
 
 
 /* --------------media queries------------- */
+@media (max-width: 980px) {
+    hr{
+        display: block;
+    }
+}
 
 @media (max-width: 480px) {
     .item {
@@ -370,12 +378,9 @@ hr {
            
     }
     
+    
 }
-@media (max-width: 980px) {
-    hr{
-        display: block;
-    }
-}
+
 
 @media (max-width: 400px) {
     header {
@@ -423,5 +428,8 @@ hr {
             background-position: 80% 80%;
             background-size: 160%;
         }
+    }
+    .nothing-found {
+        margin-top: 8rem;
     }
 }

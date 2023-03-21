@@ -26,7 +26,7 @@ header {
     box-shadow: 0 10px 20px #0ff,
     0 20px 40px #0ff,
     0 30px 60px #0ff;;
-    animation: flicker 4s linear infinite;
+    animation: flicker 3s linear infinite;
 }
 
 
@@ -181,6 +181,7 @@ header a:hover {
 }
 
 .watchlist-placeholder {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,6 +325,7 @@ hr {
 .remove {
     cursor: pointer;
     margin: 0;
+    user-select: none;
 }
 .remove-from-watchlist:active {
     transform: scale(1.2);
@@ -350,6 +352,11 @@ hr {
 
 
 /* --------------media queries------------- */
+@media (max-width: 980px) {
+    hr{
+        display: block;
+    }
+}
 
 @media (max-width: 480px) {
     .item {
@@ -383,11 +390,7 @@ hr {
     }
 }
 
-@media (max-width: 980px) {
-    hr{
-        display: block;
-    }
-}
+
 
 @media (max-width: 400px) {
     header {
